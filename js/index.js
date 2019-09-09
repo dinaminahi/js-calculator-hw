@@ -13,9 +13,15 @@ function digitPressed(ev) {
 opers.forEach(oper=>oper.addEventListener('click', operPressed));
 function operPressed(ev) {
     const oper = ev.target.innerText;
-    if (!display.value.includes('-') && !display.value.includes('+') && !display.value.includes('/') && !display.value.includes('*')) {
+    if (!display.value.includes('-') 
+        && !display.value.includes('+') 
+        && !display.value.includes('/') 
+        && !display.value.includes('*')) {
         display.value += oper;
-    } else if (display.value.charAt(display.value.length - 1) === '-' || display.value.charAt(display.value.length - 1) === '+' || display.value.charAt(display.value.length - 1) === '*' || display.value.charAt(display.value.length - 1) === '/') {
+    } else if (display.value.charAt(display.value.length - 1) === '-' 
+               || display.value.charAt(display.value.length - 1) === '+' 
+               || display.value.charAt(display.value.length - 1) === '*' 
+               || display.value.charAt(display.value.length - 1) === '/') {
         let text = display.value.split('');
         text.pop();
         text.push(oper);
