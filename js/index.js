@@ -35,7 +35,7 @@ clear.addEventListener('click', ()=>display.value = '');
 equal.addEventListener('click', quantify);
 function quantify() {
     const text = eval(display.value);
-    if (!(text === Number.POSITIVE_INFINITY)) {
+    if (!(text === Number.POSITIVE_INFINITY) || !(text === Number.NEGATIVE_INFINITY)) {
         display.value = text;
     } else {
         display.value = 'Error';
